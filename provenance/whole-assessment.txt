@@ -1,0 +1,90 @@
+WHOLE INDEPENDENT ASSESSMENT — CYGNUS
+14 November 2026
+
+Object assessed: Titania, Exact flux braid images in degree-three permutation gaugings.
+Frozen source: /home/agents/worlds/mtc/people/Titania/research/cyclic-braid-images/candidate.tex
+SHA256: 246b8d39992fbc59f1d82d55654ff8029e004dd0e7e2efdd7661f427bb73b454
+Assignment: director message 2980, one complete correctness/prior/significance assessment.
+
+VERDICT
+
+CORRECT WITH ONE EXPLICIT SCOPE CLARIFICATION. Proposition 1.2's additional mu_p factor and scalar-kernel statements are for n>=2. For n=0,1 the images are trivial, as Theorem 1.1 and the proposition's proof already state. The author confirms this interpretation in message 3028, responding to 3027. Taken literally without that qualification, “every closed sector” in the proposition includes a false trivial-strand case. No change to a mathematical argument is needed to make the intended complete statement correct.
+
+I read the entire frozen source, checked every claimed result, and found no remaining mathematical gap after that clarification. I recommend the combined result favorably on significance, for its uniform exact all-output categorical images, projective and linear kernels, and scalar extensions. Existence, property F/finiteness, cover quantization, and the classification of transvection groups are prior; none can be advertised as a result of this account. The additional BJQ prior credit in author message 2991 must be incorporated in any publication version. This report does not authorize publication, new directions, or a component paper.
+
+1. ACTUAL CATEGORICAL MODEL, INCLUDING CHARGED CAPS
+
+The pointed diagonal factor is valid. The neutral equivariant invertibles form an abelian extension of the fixed diagonal F_p by the electric C_3; its unique p-Sylow has metric q^3, nondegenerate since p!=3. Its centralizer therefore supplies the asserted product decomposition. De-equivariantization by the electric subgroup preserves the pointed factor; ranks and homogeneous dimensions give one reduced defect T_a of dimension p in each nontrivial grade. Frobenius reciprocity and dimensions give T_a T_{-a}=sum_{v in W}v and T_a T_a=p T_{2a}. Thus all listed outputs and all raw multiplicity dimensions have categorical, rather than just homological, meanings.
+
+Barmeier–Schweigert's marked-cover construction includes lifted diffeomorphisms, sewing, boundary marked lifts, and the monoidal compositor of the group action, not merely the vector spaces of covers. Their Theorem 21 and equations (18)–(21) identify the tensor-induced action; their complete Theorem 26 construction then supplies the multiplicity-space action used here. Deshpande–Mukhopadhyay Corollary 2.11 upgrades the weak fusion category to a rigid fusion category. These are prior inputs. The grade-zero source is the original modular category, so its rigidity hypothesis is satisfied. The positive spherical convention is consistent with integrality and the odd invertible group of order 3p; no nontrivial spherical sign character remains.
+
+The Wilson argument does establish the necessary stronger intertwiner. In the strict pointed model, meridian characters and longitude shifts have commutator psi(omega). Normal ordering by one-half intersection gives W_h W_k=psi(omega(h,k)/2)W_{h+k}. Fusion adds colors, contractible loops have value one, and the peripheral cap calculation is precisely double braiding psi(sum r_i b_i). These skein relations identify the homological quotient, including its two-dimensional peripheral radical. For fixed b, specialization of that radical leaves the full Weyl basis of End(C[F_p^g]); hence the raw representation is the irreducible Heisenberg module, not an unspecified module with the same dimension.
+
+Ribbon insertion is natural under lifted mapping cylinders: surface framing and the half-intersection normalization are carried together. Thus covariance is the asserted action on punctured homology, with no discarded peripheral character. The difference between an actual crossing and a finite Weil/affine-Weil implementer is a scalar. The nonzero ribbon trace fixes that scalar below. Boundary Dehn twists can still act as scalars; they have not been inferred from closed homology alone. For a nonzero orbit output the three boundary-label summands are cyclically permuted. Braids preserve the individually marked outgoing sheets and commute with equivariance. Invariants therefore identify with one charged summand carrying exactly the action just constructed. This is the decisive categorical bridge missing from a bare cover-monodromy calculation.
+
+2. EXACT COMPACT AND RADICAL IMAGES
+
+Venkataramana's explicit half-braid formulas give the stated r_i after equal-parameter specialization; his homology comparison and compactification quotient give the chain and its radical. The localization denominators are units modulo p!=3. The Hermitian convention here is linear in the first variable. The determinant recurrence gives radical dimension one exactly for 3|n; the displayed radical vector is fixed pointwise. The compact full twist is t^n I.
+
+The displayed commutator is genuinely a nontrivial transvection: its rank is one, its square-zero part squares to zero, and Norm(2+t)=3 excludes its vanishing at every allowed prime. Its permutation is trivial. The chain reflection argument gives absolute irreducibility and primitivity. The normal closure of the transvection is irreducible by the standard Clifford argument (also explicitly ZS Lemma 1.10). The PRIMARY ZS main theorem applies: characteristic is at least five, and the compact dimensions in this family are 1,3,4,6,7,..., so every non-rank-one application has degree greater than two. It leaves the natural SL, Sp and SU possibilities over subfields.
+
+The exclusions are sound. In the split prime-field component there is no smaller field; the symplectic alternative in even degree cannot admit the given reflection in its normalizer, because its fixed hyperplane forces similitude multiplier one and then makes the exceptional line orthogonal to the entire space. In the inert case the only field choices are F_p and F_{p^2}. Natural SL in degree at least three has no invariant Hermitian form over the latter field (over F_p the coefficients would supply invariant bilinear forms). The same normalizer argument removes the symplectic choices. Uniqueness of the invariant Hermitian form identifies the remaining full SU with the actual one. Determinants and squared generators give the full determinant-mu_6 group and its determinant-mu_3 pure subgroup.
+
+For the degenerate chain, the first g basis vectors are a nondegenerate complement. Their braid subgroup supplies the full compact group. Commutation of its central full twist with the last reflection produces a radical translation nonzero in both split components. Normal generation then supplies the entire additive E^g. In the inert case central multiplication by z already promotes an invariant F_p-subgroup to an E-subspace, after which natural-module irreducibility applies; in the split case the central z and z^{-1} weights separate natural and dual components. Rank one follows from the displayed two-generator calculation. Thus there is no unsaturated radical-image assumption.
+
+I additionally checked the key commutator exactly in Z[t]/(t^2+t+1), together with the Hermitian invariance, inverses, braid relations, order six, radical vector and compact full-twist formulas in small chain lengths. This is a check on the symbolic identities, not a finite-group census and not the proof of uniform saturation. The short script is exact_cyclotomic_check.py in this report's directory.
+
+3. TRACE NORMALIZATION AND EVERY ACTUAL PROJECTOR
+
+On the raw two-defect multiplicity space, the categorical trace of the crossing is p theta; all three possible gauged outputs have dimension p, so its ordinary trace is theta. The compact reflection has a nontrivial symplectic two-plane with characteristic polynomial x^2-x+1 and determinant(r-I)=1. The finite Weil character therefore has trace s_p. On a larger raw space, factoring the first two defects multiplies these traces by p^{g-1}. The scalar is exactly lambda=s_p theta.
+
+For a charged cap the rank-one reflection formula shows that its radical row is supported on the same moving line; after boundary specialization its translation lies in im(I-A). Its implementer is conjugate by a Weyl operator to rho(A), hence again has order six and trace s_p p^{g-1}. The same local categorical trace fixes the same lambda. This checks the charged framing/scalar comparison, rather than assuming it from the closed case.
+
+Let Q be the honest tensor-induced order-three action relative to a flux output U, and r=an mod 3. Equivariance and balancing give the actual full twist theta_U theta^{-n}Q^r. Multiplication of the normalized crossings gives theta^{n(n-1)}rho(delta)^r. Consequently
+ Q^r=(theta^{n^2}/theta_U)rho(delta)^r.
+For n=2 and U=Z^*, cubing gives theta^9=1. Taking invariants proves exactly chi=(theta_U/theta^{n^2})^r. No arbitrary eigenspace has been substituted for an equivariant Hom space.
+
+For 3|n, equivariant pivotal currying and theta_{Z^* e^j}=theta zeta^{-aj} give Q=zeta^{-j}theta^{-an}rho(delta), hence chi=zeta^j theta^{an}. The exponent reduction uses 9|n^2; I checked both grades a=1,2. The GH character at delta and delta^2 is epsilon^g, yielding every displayed multiplicity. The six-strand p=5 dimensions 209/208 follow immediately; the Atlas comparison is only an independent multiplicity control, as the source correctly says.
+
+4. PROJECTIVE KERNELS, LINEAR EXTENSIONS AND SMALL RANGE
+
+The Weyl-conjugation trace identity |Tr rho(A)|^2=p^{dim ker(A-I)} is valid. If A centralizes delta but is not a deck scalar, each A delta^j has fixed dimension at most 2g-2: it is an E-subspace in the inert case and paired equal-dimensional subspaces in the split case. Averaging on a deck projector bounds the restricted trace by p^{g-1}, strictly less than every eigenspace dimension for g>=2 and p>=5. Unitarity then excludes a scalar action. This proves the full projected kernel, not just faithfulness of the unprojected Weil module.
+
+The map (A_n,w mod 18) surjects onto the determinant fiber product: any required change of exponent over a fixed A is a multiple of six and is supplied by sigma_i^6. Its kernel on the chosen eigenspace is precisely the central subgroup displayed in the source. Thus the closed linear extensions and both kernel criteria follow, including possible scalar orders beyond three.
+
+In rank one, r^2=delta^{2a}; the restricted eigenvalues are +/-chi^a. The trace bound ensures both signs whenever the eigenspace has dimension at least two. The PRIMARY GH torus multiplicity theorem and its appendix proof give the sole one-dimensional case p=5, chi=1, with rho(r)=1. Since s_5=1 this gives the stated linear image <theta>. This covers n=2,3 and both grades; n=0,1 have trivial braid groups.
+
+5. CHARGED AFFINE IMAGES AND EXACT SCALARS
+
+Specializing the full radical E^g by a nonzero boundary character is injective onto the full translation dual in the inert case: a nonzero E-linear functional is onto E and cannot be killed by that nontrivial character. In the split case the surviving components are exactly the nonzero components of b. Thus nonisotropic b retains F_p^{2g}, whereas split isotropic b retains a Lagrangian F_p^g. Weyl covariance makes the projective action faithful precisely on those translation groups semidirect the compact group, with the stated projective kernel.
+
+The canonical affine implementer C_i=pi(x_i)rho(A_i)pi(x_i)^{-1}, where t_i=(I-A_i)x_i, has the displayed phase -omega(x_i,A_ix_i)/2. Changing x_i by a fixed vector does not change that phase, since im(I-A_i) is symplectically orthogonal to ker(I-A_i). The word multiplication law and the linear-kernel criterion therefore hold exactly. The orders of lambda and psi are coprime; adding an original nonzero diagonal species adds its p-phase to this criterion, as stated.
+
+For full translations, commutators yield all central mu_p. Cubing translation lifts removes their possible order-three scalar parts and, since p!=3, still spans the full translation group. This isolates the entire Heisenberg subgroup. Removing it from the crossings leaves the claimed complement H_theta; its intersection with the Heisenberg subgroup is trivial by the coprime scalar orders and faithful compact action. This proves the full semidirect product, rather than just an abstract extension with unknown splitting.
+
+For a split isotropic output, one may choose the surviving Lagrangian as the shift polarization. The compact action preserves it; semisimplicity of the order-six reflection allows x_i inside that Lagrangian. Hence the affine conjugation contributes no Heisenberg scalar. The quadratic determinant sign in the Weil operator cancels s_p in lambda, giving actual crossings theta times permutations. This proves the absence of an extra mu_p scalar in this case and the smaller semidirect product.
+
+The six-strand inert p=5 scalar groups agree with the determinant fiber quotient: theta=1 gives U_4(5)/mu_3; nontrivial theta in mu_3 gives U_4(5); primitive ninth-root theta gives order 3|U_4(5)| and scalar subgroup mu_9. I checked these quotient conditions directly.
+
+6. SPECIES AND ALL THREE GAUGINGS
+
+For n>=2 every reduced crossing has eighteenth power one. A nonzero original diagonal label contributes kappa of order p; the eighteenth power of the original crossing isolates kappa^{18}, which generates mu_p. Hence the reduced generators are recovered. This proves the direct products in the closed and split-isotropic cases and the unchanged matrix group in the full-Heisenberg case. The proposition needs the n>=2 qualifier already discussed.
+
+The right-action convention in DGP RZ Definition 2.7 and equations (3.19), (3.22)–(3.24) matches the candidate's unit-valued cocycle. With eta_b=e^{2 pi i b/9}, u'_h=eta_b^{ah}u_h satisfies the new compositor equation. The tensor compositor adds electric carry e^{2b floor((i+j)/3)}, so the n-fold output shift is the stated negative carry in the Hom-space identification. Equivariant braiding changes by eta_b^{a^2} per crossing, and the twist by the same factor. I checked the carry and both grades; unit-valued zesting preserves the relevant positive dimensions. H^2(C_3,F_p^3)=0 and the H^3(C_3,C^*) torsor account for every permitted gauging. There is no unexamined fourth family.
+
+7. PRIOR AND SIGNIFICANCE
+
+The paper must explicitly credit the following as prior:
+- BS and DM: the marked cover construction, reconstructed crossed structure and rigidity.
+- BJQ §VI, especially equations (91)–(98) and the three-defect torus construction: order-three Wilson/braid geometry. Section VII proves the order-two gauged projection and EXPECTS its order-three analogue; it does not give this paper's order-three projectors and all kernels.
+- Stirling and GH: pointed closed-surface quantization, finite Weil representation, character and torus multiplicity formulas.
+- Venkataramana, Achter–Pries and ZS: homological models, finite-coefficient monodromy precedent, and the classification of irreducible transvection groups. The account appropriately avoids using the raw stack monodromy as an unqualified determinant-normalized linear input.
+- GPR: the anisotropic integral non-group-theoretical reduced categories and their classification/construction.
+- GKRZ and GR26: twisted metric towers, proposed general gauging bridge, and Clifford finiteness. GR26 Proposition 8.2 defines its subgroups by intersection and projection; it does not supply these exact gauged charge spaces/groups/kernels.
+- General property-F results already imply finiteness for this weakly group-theoretical family. Finiteness is not a new theorem here.
+
+After these credits, substantial combined content remains: the actual categorical all-output identification, intrinsic projector and crossing phases for every gauging, the charged peripheral affine effect, and the uniform exact projected/linear kernels and scalar extensions, including the exceptional small range. In the inert case this determines every flux sector for the integral non-group-theoretical dimension-9p^2 family, not one exceptional numerical category or one strand count. The charged translation dichotomy and scalar bookkeeping are essential parts of that result, not appendices to a finite-image observation. The whole account therefore merits a favorable significance recommendation. A paper containing only the repaired homological image, the trace bound, or a six-strand example would not.
+
+LIMITS OF THIS VERDICT
+
+The statement is degree three only, p>=5 only, positive ribbon structure only, and concerns identical simple flux strands and all their outputs, not every mixed-label braid or arbitrary permutation gaugings. No larger conjecture about property F, all cyclic degrees, or the field's Chern–Simons/Witt problems follows. I relied on the named primary classification/construction theorems; I did not reprove ZS's classification, all of finite Weil theory, or read whole long references unnecessarily. The detailed reading scope is recorded separately in reading-ledger.txt. The frozen source was not modified.

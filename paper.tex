@@ -1,0 +1,685 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,mathrsfs,hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\U}{\operatorname{U}}
+\newcommand{\Heis}{\operatorname{Heis}}
+\newcommand{\FPdim}{\operatorname{FPdim}}
+\title{Exact flux braid images in degree-three permutation gaugings}
+\author{Titania}
+\date{14 November 2026}
+\begin{document}
+\begin{abstract}
+For every prime $p\ge5$, we determine the exact braid images on all
+fusion spaces of identical three-cycle fluxes in every $C_3$ permutation
+gauging of a pointed modular category on $\mathbb F_p$.
+We identify the actual equivariant charge projectors and crossing
+scalars. Generic closed sectors have determinant-$\mu_6$ linear or
+unitary images modulo the order-three deck group; charged sectors have
+full symplectic or Lagrangian translation groups with explicit
+Heisenberg--Weil extensions. We give projective and linear braid-kernel
+criteria, restore every diagonal flux species, compare all three gauging
+cocycles, and determine the small-strand exceptions.
+\end{abstract}
+\maketitle
+
+\section{Statement and notation}
+Fix a prime $p\ge5$, $p\ne3$, and a metric form
+$q(x)=\exp(2\pi i c x^2/p)$ on $\Fp$, $c\ne0$.
+Let $\mathcal G$ be any $C_3$ permutation gauging of
+$\mathcal C(\Fp,q)^{\boxtimes3}$, with its positive ribbon structure.
+All three gauging choices are included. A three-cycle flux has grade
+$a=1$ or $2$ relative to a fixed generator of $C_3$.
+The positive ribbon convention loses no spherical choice here:
+weak integrality gives the canonical positive spherical structure, and
+the invertible group has odd order $3p$. Nondegeneracy identifies its
+dual with the universal grading group, so there is no nontrivial
+spherical change with values in $\{1,-1\}$.
+
+Put $E=\Fp[z]/(z^2+z+1)$, with $\bar z=z^{-1}$.
+It is $\mathbb F_{p^2}$ for $p\equiv2\pmod3$, and $\Fp\oplus\Fp$
+otherwise. On a nondegenerate Hermitian $E$-module of rank $g$, put
+\[
+\Gamma_g=\{A\in\U_g(E/\Fp):\det_E A\in\mu_6\},\qquad
+\delta=zI_g,\quad d=-z^a.
+\]
+In the split case $\U_g(E/\Fp)$ is naturally $\GL_g(\Fp)$, acting
+symplectically on $L\oplus L^*$. The abstract group $\Gamma_g$ is
+independent of the chosen nondegenerate Hermitian form.
+Write $s_p=(\frac{-1}p)$ and let $\rho$ be the finite Weil
+representation for the additive character associated to $q$.
+The choice of symplectic basis does not change any group below.
+
+There is a canonical pointed factor and a reduced gauging
+\begin{equation}\label{split}
+\mathcal G\simeq\mathcal C(\Fp,q^3)\boxtimes\mathcal E,
+\qquad\FPdim(\mathcal E)=9p^2.
+\end{equation}
+The neutral metric plane of $\mathcal E$ is
+$W=\{(x_1,x_2,x_3):\sum x_i=0\}$, with cyclic rotation.
+Its electric objects are $e^j$, $j\in\mathbb Z/3$.
+Its other neutral simples are the three-element orbits $O_b$,
+$0\ne b\in W$. There are three flux simples in each nonneutral grade,
+all of dimension $p$. Write a flux in $\mathcal G$ as $X=x\boxtimes Z$,
+where $Z\in\mathcal E$ has grade $a$ and twist $\theta$.
+For $Y=y\boxtimes U$, a nonzero fusion space forces $y=nx$.
+The diagonal factor multiplies each braid generator by $q(x)^3$.
+We state the reduced answer first and then specify the resulting groups
+and kernels for $\mathcal G$.
+
+For $n\ge2$ set
+\[
+g=\begin{cases}n-2,&3\mid n,\\n-1,&3\nmid n.\end{cases}
+\]
+Let $A_n:B_n\to\Gamma_g$ be the compact Burau representation at
+$z^a$, and let $w:B_n\to\mathbb Z$ send every standard crossing to one.
+The matrices and their compact quotient are specified in Section~\ref{arith}.
+
+\begin{theorem}\label{main}
+For $n\ge2$ the following describe every nonzero reduced fusion space
+$\Hom_{\mathcal E}(U,Z^n)$.
+\begin{enumerate}
+\item Suppose $3\nmid n$. Then $U$ is a flux of grade
+$r=an\bmod3$, represented by $r\in\{1,2\}$. Put
+\[
+\chi=(\theta_U/\theta^{n^2})^r\in\mu_3.
+\]
+The fusion space is the $\chi$-eigenspace of $\rho(\delta)$, and the
+braid action is
+\begin{equation}\label{closedaction}
+\beta\longmapsto (s_p\theta)^{w(\beta)}
+\rho(A_n(\beta))\big|_{\mathscr W_\chi}.
+\end{equation}
+\item Suppose $3\mid n$ and $U=e^j$. The same assertion holds with
+\[
+\chi=e^{2\pi i j/3}\theta^{an}.
+\]
+In both cases $\theta^9=1$. For $g\ge2$ the projective image is exactly
+$\Gamma_g/\langle\delta\rangle$, with projective kernel
+\[
+\{\beta:A_n(\beta)\in\langle\delta\rangle\}.
+\]
+The dimension is $(p^g+2\varepsilon^g)/3$ for $\chi=1$, and
+$(p^g-\varepsilon^g)/3$ otherwise, where $\varepsilon=(\frac{-3}p)$.
+\item Suppose $3\mid n$ and $U=O_b$, $b\ne0$. The dimension is $p^g$.
+There is a degenerate Burau representation
+\[
+\widetilde A_n:B_n\longrightarrow E^g\rtimes\Gamma_g.
+\]
+Its translation part, paired with the boundary character of $b$, has
+image $K_b$. Here $K_b$ is the full symplectic additive space $\Fp^{2g}$
+if $E$ is a field or $b$ is nonisotropic; in the remaining split
+isotropic case it is a Lagrangian $\Fp^g$.
+The projective image is exactly $K_b\rtimes\Gamma_g$.
+Its projective kernel consists precisely of braids with compact part
+$I$ and radical translation annihilated by the boundary character.
+\end{enumerate}
+For $g=1$, the compact group is $\mu_6$ and the generic projective
+image in the first two cases is $C_2$, with kernel $w^{-1}(2\mathbb Z)$.
+Its linear image is cyclic of order
+$2\operatorname{ord}(\theta\chi^a)$. The only exception is
+$p=5$, $\chi=1$: the fusion space is one-dimensional and its linear
+image is $\langle\theta\rangle$, so its projective image is trivial.
+Its linear kernel is $w^{-1}(\operatorname{ord}(\theta)\mathbb Z)$.
+For $n=0,1$ all nonzero spaces are one-dimensional and the braid group
+is trivial. Scalar extensions in every case are specified below.
+\end{theorem}
+
+Here is an explicit finite-group description of the linear extensions;
+it also makes their scalar kernels computable without an implicit
+choice of braid character. Put $\lambda=s_p\theta$ and
+\begin{equation}\label{hat}
+\widehat\Gamma_{g,a}=
+\{(A,k)\in\Gamma_g\times\mathbb Z/18:\det_E A=d^k\}.
+\end{equation}
+Its order is $3|\Gamma_g|$.
+For a closed-sector character $\chi$ in the generic range of
+Theorem~\ref{main}, the linear image is
+\begin{equation}\label{closedextension}
+\widehat\Gamma_{g,a}/
+\{(\delta^j,k):\det_E\delta^j=d^k,\ \lambda^k\chi^j=1\}.
+\end{equation}
+The linear braid kernel is given by $A_n(\beta)=\delta^j$ and
+$\lambda^{w(\beta)}\chi^j=1$.
+For charged sectors define
+\[
+N_\theta=\{(I,k):k\equiv0\pmod6,\ \lambda^k=1\},\qquad
+H_\theta=\widehat\Gamma_{g,a}/N_\theta.
+\]
+It has order $|\Gamma_g|$ if $\theta^3=1$, and $3|\Gamma_g|$ otherwise.
+The full-translation charged image is
+\begin{equation}\label{chargedextension}
+\Heis_p(\Fp^{2g})\rtimes H_\theta,
+\end{equation}
+in its faithful Schr\"odinger--Weil realization. Its scalar subgroup is
+$\mu_p$, enlarged by $\mu_3$ exactly when $\theta^3\ne1$.
+The split isotropic image is $\Fp^g\rtimes H_\theta$, with scalar
+subgroup trivial or $\mu_3$ according to the same condition.
+The action of $H_\theta$ on the Heisenberg group or translation space
+is through its projection to $\Gamma_g$.
+
+\begin{proposition}[Restoring every original flux species]\label{species}
+Assume $n\ge2$.
+For $X=x\boxtimes Z$ put $\kappa=q(x)^3$. If $x=0$ the preceding
+groups and kernels already give the answer. If $x\ne0$, then $\kappa$
+has order $p$. Projective images and kernels are unchanged. For every
+closed sector, including the one-dimensional exception, the linear image
+is the direct product of $\mu_p$ with its reduced image. The same is
+true for a split isotropic charged sector. Its linear kernel is the
+intersection of the reduced linear kernel with $w^{-1}(p\mathbb Z)$.
+For a full-translation charged sector the linear image is the same
+matrix group as the reduced image. In its word criterion replace
+$\lambda^w\psi(z)$ by $\kappa^w\lambda^w\psi(z)$.
+\end{proposition}
+\begin{proof}
+For a reduced crossing its sixth power is $\lambda^6$, so the
+eighteenth power is one. The original crossing has eighteenth power
+$\kappa^{18}$, which generates $\mu_p$. This isolates the extra scalar
+and recovers the reduced generators whenever $n\ge2$. In the closed
+and isotropic cases their scalar subgroups have order prime to $p$,
+so the product is direct and the kernel condition follows. In the
+full-translation case $\mu_p$ is already contained in the reduced
+image, and hence multiplying generators by its elements changes
+neither the generated matrix group nor its abstract extension.
+The braid groups for $n=0,1$ are trivial.
+\end{proof}
+
+\begin{remark}[The first six-strand vacuum and the prime-five control]
+For grade one, the six-strand vacuum is the
+$\theta^6$-eigenspace in the genus-four Weil module. Its actual
+projector is
+\[
+\frac13\sum_{k=0}^2\theta^{3k}\rho(\delta)^k.
+\]
+At $p=5$, its dimension is $209$ if $\theta^3=1$, and $208$
+otherwise; its projective image is $\U_4(5)/\mu_3$ in all cases.
+Its reduced linear image is $\U_4(5)/\mu_3$ if $\theta=1$,
+is $\U_4(5)$ if $\theta\ne1$ but $\theta^3=1$, and has order
+$3|\U_4(5)|$ and scalar subgroup $\mu_9$ otherwise, with the
+explicit extension in~\eqref{closedextension}.
+
+As a consistency check, the stored dimension-$225$, rank-$17$
+fusion tensors in the Anyon Atlas~\cite{Atlas} give vacuum multiplicities
+$(2,208)$ at strand counts $(3,6)$ for B17-00346 and B17-00347,
+whose flux twists have nontrivial cube, and $(1,209)$ for B17-00506,
+whose flux twist cubes are one. This checks the projector's multiplicity
+prediction, not the categorical identification or exact braid image.
+The catalogue's categorification flags for these entries are false;
+the construction of the anisotropic gauging itself is prior~\cite{GPR}.
+\end{remark}
+
+\section{Relation to previous work}
+We use previously established existence and finiteness results. The
+cover modular functor is due to Barmeier--Schweigert~\cite{BS}; its
+weak rigidity is upgraded by Deshpande--Mukhopadhyay~\cite{DM},
+Corollary 2.11. Crossed extension/zesting theory supplies the three
+gauging choices~\cite{DGP RZ}. In the anisotropic case the reduced
+categories themselves, their fusion rules and their non-group-theoreticality
+are the Galindo--Plavnik--Rowell construction~\cite{GPR}.
+The pointed closed-surface representation and the finite Weil
+linearization are prior~\cite{Stirling,GH}.
+Barkeshli--Jian--Qi~\cite{BJQ}, Section VI, equations (91)--(98),
+already construct the order-three genon Wilson algebra and its braid
+automorphisms, including the three-defect torus interpretation in
+Section VI.B. Their Section VII computes the gauged order-two projection
+and proposes the analogous order-three relation. We build on this
+geometric and Wilson-algebra method, retaining the actual order-three
+equivariant projectors, peripheral characters, crossing phases and exact
+image and kernel information.
+Exact finite-coefficient
+trielliptic monodromy was studied by Achter--Pries~\cite{AP}; its raw
+stack versus determinant-normalization convention is not being used
+as an unqualified linear input here. The explicit Burau model is
+prior~\cite{Ven}. We use the deep classification of irreducible
+transvection groups~\cite{ZS}, rather than claim that classification.
+The advance is the actual charge projection, uniform projected
+kernel, scalar normalization and charged affine image for this entire
+family. The general fixed-subalgebra principle in~\cite{GKRZ},
+Principle 5.2, is a proposal, not a prior theorem supplying these bridges.
+The newer metric-tower finiteness result~\cite{GR26}, Proposition 8.2
+and Theorem 8.4, gives a finite Clifford extension with its translation
+and linear-image subgroups defined by intersection and image. It does
+not identify the actual gauged charge spaces or the exact groups here.
+
+\section{The categorical spaces and their Wilson algebra}\label{cat}
+\begin{lemma}\label{diagonal}
+The decomposition~\eqref{split} exists. The reduced neutral category
+has the stated metric plane, and a nontrivial grade has one underlying
+defect $T_a$ of dimension $p$. Its products are
+\[
+T_aT_b=pT_{a+b}\ (a+b\ne0),\qquad
+T_aT_{-a}=\bigoplus_{v\in W}v.
+\]
+\end{lemma}
+\begin{proof}
+Neutral equivariant invertibles form an abelian group extension of
+the diagonal $\Fp$ by $\widehat C_3$. There are three lifts of each
+fixed invertible since $H^2(C_3,\mathbb C^\times)=0$.
+The unique Sylow $p$ subgroup has twist $q^3$, hence is nondegenerate.
+Its M\"uger centralizer gives~\eqref{split}. The electric subcategory
+centralizes it, and de-equivariantization identifies the neutral
+centralizer with its orthogonal complement in $\Fp^3$, namely $W$.
+Rotation is fixed-point-free on $W$.
+The original geometric permutation category has $p$ simples in each
+nonidentity grade, since its sector is one copy of
+$\mathcal C(\Fp,q)$ as an abelian category. De-equivariantizing
+the product decomposition by the electric $C_3$ leaves the pointed
+factor unchanged. Ranks multiply, so the reduced nonidentity grade
+has exactly one simple. All homogeneous components have dimension
+$p^2$, so its dimension is $p$. Dimension and grading
+give the displayed products; every neutral invertible occurs once in
+$T_aT_a^*$ by Frobenius reciprocity.
+\end{proof}
+
+The cover construction in~\cite{BS}, Theorem 26, assigns the pointed
+modular functor of the associated cover to a marked $C_3$-cover.
+Its duality represents $\Hom(1,T\otimes-)$, the same r-category
+duality used in~\cite{DM}. Corollary 2.11 there makes this finite
+semisimple monoidal category rigid because its neutral component is
+rigid. Reconstruction identifies its genus-zero braiding and the
+action on multiplicities with the lifted cover diffeomorphisms, including
+simultaneous deck changes of the boundary markings. Thus equivariantization
+selects invariants of the actual tensor-induced action, not the whole
+cover state space. All other gaugings differ by the crossed cocycles
+treated in Section~\ref{zesting}.
+
+The Riemann--Hurwitz formula gives the genus in Theorem~\ref{main}.
+For $3\nmid n$ the outgoing flux contributes one ramified cap; for
+$3\mid n$ there are three unramified caps. An electric output caps
+them by units. A neutral label $b=(b_1,b_2,b_3)$ caps them by the
+corresponding pointed labels, whose sum must vanish.
+
+\begin{lemma}[Wilson quantization]\label{wilson}
+On a genus-$g$ pointed modular-functor space with three caps labeled
+$b_1,b_2,b_3\in\Fp$, $\sum b_i=0$, the normalized Wilson operators
+form the twisted homology algebra
+\[
+W_hW_k=\psi(\tfrac12\omega(h,k))W_{h+k},\qquad
+\psi(t)=\exp(2\pi i\,2ct/p),
+\]
+where $h,k\in H_1(\Sigma\setminus\{P_1,P_2,P_3\},\Fp)$ and
+$\omega$ is intersection. Its radical $R$ has dimension two.
+A peripheral class $r=(r_1,r_2,r_3)$, modulo the diagonal, acts by
+\begin{equation}\label{boundarychar}
+\chi_b(r)=\psi\left(\sum r_i b_i\right).
+\end{equation}
+After this central specialization the algebra is
+$\operatorname{End}(\mathbb C[\Fp^g])$. Lifted diffeomorphisms act
+on it by their homology action. The analogous closed space is the
+finite Heisenberg module with projective finite Weil action.
+\end{lemma}
+\begin{proof}
+Use the strict pointed model with trivial associator. Its braiding is
+$\exp(2\pi i c xy/p)$ and its twist is $q(x)$.
+Cut a handlebody to the usual
+handle graph and an arc joining the charged caps. Its basis is labeled
+by $g$ independent elements of $\Fp$, so the state-space dimension
+is $p^g$. Wilson curves along the handle meridians multiply a basis
+vector by its double-braiding character, and curves along the
+longitudes shift its label. Normal ordering with the half-intersection
+factor gives exactly the displayed multiplication law. The same
+skein calculation resolves any crossing of two colored curves; fusion
+adds their labels. A contractible curve acts by the dimension one,
+and moving a peripheral curve past a cap gives its double braiding,
+which is~\eqref{boundarychar}. The relation between the three
+peripheral classes is their sum, consistent with $\sum b_i=0$.
+These relations show that the normalized operator depends only on
+the indicated mod-$p$ homology class. Handle shifts and characters
+are the standard Weyl basis of the full matrix algebra, proving
+irreducibility and the stated specialization.
+
+Naturality of insertion of a ribbon curve in a mapping cylinder sends
+$W_h$ to $W_{f_*h}$; blackboard framing and the half-intersection
+normalization are preserved. Schur's lemma therefore determines the
+mapping-cylinder operator up to one scalar. This proves the
+Heisenberg covariance assertion, including charged caps. In the
+closed case it is also the projective equivalence in~\cite{Stirling},
+Theorem 6.79, followed by the finite Stone--von Neumann construction
+in~\cite{GH}, Section 1. No assertion that charged surfaces factor
+through closed homology is made.
+\end{proof}
+
+For a nonzero orbit output, the three summands with labels
+$b,zb,z^2b$ are cyclically permuted by equivariance. Invariants of
+their direct sum identify with one summand. Braids commute with this
+equivariance and preserve the three marked outgoing sheets, so the
+gauged braid action is exactly its action on this one charged space.
+
+\section{Finite-field Burau images}\label{arith}
+Let $t=z^a$ and $m=n-1$. On the chain $E^m$ use the Hermitian matrix
+with diagonal $1$, upper off-diagonal $t^{-1}$, lower off-diagonal $t$.
+The standard generators are
+\begin{equation}\label{braidmatrices}
+r_i\epsilon_i=-t\epsilon_i,\quad
+r_i\epsilon_{i-1}=\epsilon_{i-1}+t\epsilon_i,\quad
+r_i\epsilon_{i+1}=\epsilon_i+\epsilon_{i+1},
+\end{equation}
+fixing other basis vectors. These are the specialized Burau matrices;
+the cover-homology identification follows from the explicit Gassner
+model in~\cite{Ven}, Lemma 14 and Section 7. The determinant recurrence
+$D_m=D_{m-1}-D_{m-2}$, $D_0=D_1=1$, shows a one-dimensional radical
+exactly when $m\equiv2\pmod3$. It is generated by
+\[
+v=\sum_{i=1}^m(1-t^i)\epsilon_i.
+\]
+It is fixed pointwise. The compact homology is the quotient by this
+radical. The full twist acts on a nondegenerate chain for $n$ strands
+by $t^n I$, hence as $\delta^{an}$.
+
+\begin{lemma}\label{finiteimage}
+For $n\ge4$ the compact image is exactly $\Gamma_g$ and its pure
+image has determinant in $\mu_3$ and contains the full special group.
+For $n=2,3$ the compact image is $\mu_6$. If $3\mid n$, the
+uncapped degenerate image is exactly $E^g\rtimes\Gamma_g$.
+\end{lemma}
+\begin{proof}
+Here is a direct finite-field argument, using the
+PRIOR transvection classification in~\cite{ZS}.
+Set $u=r_1r_2^{-1}$. Direct multiplication on three consecutive
+vectors gives
+\[
+[u,r_1ur_1^{-1}]-I
+=-(2+t)(-t,1,0)^t(0,0,1).
+\]
+This is a nonzero square-zero rank-one matrix: $N(2+t)=3$.
+It fixes all later basis vectors. The braid commutator is pure,
+since the permutations of $u$ and its $r_1$-conjugate are opposite
+three-cycles. Thus a transvection belongs to the pure image, over
+each field component of $E$.
+
+The nondegenerate chain image is absolutely irreducible. An invariant
+subspace containing a nonfixed vector contains an image of some
+$r_i-I$, hence $\epsilon_i$, and neighboring reflections then give
+all basis vectors. Nondegeneracy excludes a common fixed vector.
+It is primitive: if a rank-one reflection permutes direct-sum blocks
+nontrivially, the rank bound forces an interchange of two lines.
+Its eigenvalues there must be $1,-1$. The exceptional eigenvalue
+here is $-t\ne-1$, a contradiction.
+
+Let $H$ be the normal closure of the displayed transvection in the
+full chain image. Clifford theory makes the restriction to $H$
+semisimple; primitivity permits just one isotypic component, and
+the rank-one action of a transvection forces multiplicity one.
+Thus $H$ is irreducible. The main theorem of~\cite{ZS} leaves natural
+special-linear, symplectic and special-unitary groups over subfields.
+In the split case the ground field is prime. The symplectic option
+cannot have these reflections in its normalizer: its alternating
+form is unique up to scalar, while in dimension at least four a
+semisimple reflection with exceptional eigenvalue different from one
+cannot preserve a nondegenerate alternating form up to scalar.
+Indeed its fixed hyperplane has nonzero restricted form, forcing the
+similitude multiplier to be one, and then its exceptional line is
+orthogonal to the entire space.
+
+In the inert case the only fields are $\Fp$ and $\mathbb F_{p^2}$.
+Special-linear groups on their natural module have no invariant
+Hermitian form here: over $\Fp$ its coefficients would be invariant
+bilinear forms, and over $\mathbb F_{p^2}$ the unrestricted root-group
+parameter violates the unitary transvection condition. The symplectic
+possibilities are excluded by the same normalizer argument. Therefore
+$H$ is the full special-unitary group. Since the original transvection
+was pure, so is its whole normal closure. Determinants of the
+$r_i$ generate $\mu_6$, and those of $r_i^2$ generate $\mu_3$,
+which proves the asserted exact images.
+
+When the original chain is degenerate, the first $g=m-1$ basis
+vectors span a nondegenerate complement to its radical. Its braid
+subgroup already gives the full compact group just proved. The
+rank-one compact cases follow directly from~\eqref{braidmatrices}.
+
+For the final assertion write the degenerate module as $R\oplus V$
+using this complement. Its isometries fixing $R$ pointwise have form
+$E^g\rtimes\U(V)$. The first $n-1$ strands supply the block-diagonal
+$\Gamma_g$. Their full twist is $1$ on $R$ and $t^{-1}$ on $V$.
+The last reflection has a radical row $\ell$ nonzero in both split
+components: the last coefficient $1-t^m=1-t^{-1}$ of the radical
+vector is a unit, and its action on $\epsilon_{m-1}$ adds
+$t\epsilon_m$. Commuting it with the preceding full twist therefore
+produces a nonzero radical translation in both components.
+
+In the inert case the natural $\Gamma_g$-module remains irreducible
+over $\Fp$. For $g\ge3$ it is absolutely irreducible over $E$ and
+is not equivalent to its Frobenius conjugate: the special-unitary
+diagonal element with entries $d,d,d^{-2},1,\ldots$ has trace not in
+$\Fp$, since $d+d^{-1}=1$. For $g=1$ use $d$ itself. The standard
+restriction-of-scalars argument now gives irreducibility. In the
+split case the two radical modules are the natural and dual modules;
+they are irreducible and nonisomorphic for $g\ge3$, and their
+one-dimensional weights differ for $g=1$. A stable additive subgroup
+with nonzero projections to both therefore contains both. Conjugating
+the radical translation thus gives all of $E^g$, proving the split
+semidirect product. For $n=3$ the same conclusion follows directly
+from $r_1r_2^{-1}=I+(-t,1)^t(1,t)$ and conjugation by $r_1$.
+\end{proof}
+
+\section{Ribbon trace and the actual deck projector}
+\begin{lemma}\label{normalization}
+On every relevant raw cover space the crossing is the trace-normalized
+Weil or affine-Weil implementer times $\lambda=s_p\theta$.
+Moreover $\theta^9=1$, and the actual projectors are exactly those
+in Theorem~\ref{main}.
+\end{lemma}
+\begin{proof}
+The two-strand multiplicity space $M=\Hom(T_{2a},T_a^2)$ has
+dimension $p$ and is the direct sum of the three gauged flux-output
+spaces. All three output objects have dimension $p$. The ribbon
+trace of the crossing is the positive-curl invariant $p\theta$.
+Thus the ordinary trace of its operator on $M$ is $\theta$.
+Its compact half-braid has characteristic polynomial $x^2-x+1$,
+so the standard Weil character formula gives trace $s_p$.
+The scalar is therefore $s_p\theta$. Factoring the first two defects
+from any larger raw multiplicity space multiplies both traces by
+$p^{g-1}$ and gives the same scalar.
+
+For charged caps the homology reflection induces an affine map with
+a fixed point. Indeed its radical row is supported on the moving
+line of the same reflection, so its symplectic translation lies in
+$\operatorname{im}(I-A)$. Its implementer is conjugate by a Weyl
+operator to $\rho(A)$, has order six, and has trace $s_pp^{g-1}$.
+The identical categorical trace fixes its scalar too.
+
+Suppose $3\nmid m$, and choose an equivariant flux output $U$ of
+grade $r=am\bmod3$. On the raw space let $Q$ be the honest order-three
+equivariance operator relative to $U$. A $\zeta^j$-eigenvector is a
+morphism from $Ue^j$. Its twist is $\theta_U\zeta^{rj}$, because
+gauged twist uses equivariance at the object's grade. Thus balancing
+identifies the full braid twist on the raw space with
+$\theta_U\theta^{-m}Q^r$.
+On the other hand the normalized braid formula gives
+$\theta^{m(m-1)}\rho(\delta)^r$; the sign disappears since
+$m(m-1)$ is even. Therefore
+\[
+Q^r=(\theta^{m^2}/\theta_U)\rho(\delta)^r.
+\]
+Taking $m=2$, $U=Z^*$ and cubing forces $\theta^9=1$.
+The same identity for general $m$ shows its scalar is in $\mu_3$;
+raising to the inverse exponent $r$ yields the first stated projector.
+
+For $3\mid n$, pivotal currying is equivariant and identifies
+$\Hom(e^j,Z^n)$ with $\Hom(Z^*e^j,Z^{n-1})$. The underlying capped
+covers agree, with the same deck generator. Apply the preceding formula
+using $\theta_{Z^*e^j}=\theta\zeta^{-aj}$ and $r=-a\bmod3$.
+Reducing exponents modulo nine gives
+$Q=\zeta^{-j}\theta^{-an}\rho(\delta)$. Its invariant space is
+precisely the stated $\chi$-eigenspace.
+\end{proof}
+
+\section{Projected kernels and scalar extensions}
+\begin{lemma}\label{projectedkernel}
+For $g\ge2$, the projective kernel of the centralizer of $\delta$
+on every Weil deck eigenspace is $\langle\delta\rangle$.
+\end{lemma}
+\begin{proof}
+The Weyl basis gives
+$|\Tr\rho(A)|^2=p^{\dim\ker(A-I)}$ by taking the trace of conjugation.
+The fixed-point-free Weil character formula~\cite{GH}, equation (1.2),
+gives $\Tr\rho(\delta)=\Tr\rho(\delta^2)=\varepsilon^g$, yielding
+the dimensions in the theorem. If $A$ centralizes $\delta$ and is
+not a deck scalar, each $A\delta^j-I$ has fixed space of dimension
+at most $2g-2$. In the inert case it is a proper $E$-space. In the
+split case the dimensions in the dual eigenspaces agree and their
+sum is even. Averaging the three traces on the projector gives
+\[
+|\Tr(\rho(A)|_{\mathscr W_\chi})|\le p^{g-1}
+<(p^g-2)/3\le\dim\mathscr W_\chi.
+\]
+A scalar unitary action would have trace modulus equal to the
+dimension. Deck scalars do act scalarly, proving the assertion.
+\end{proof}
+
+The homological image and Lemmas~\ref{normalization}--\ref{projectedkernel}
+give the first two image and kernel statements. Every $r_i^6=I$
+and $w(\sigma_i^6)=6$, so the map to~\eqref{hat} is surjective.
+An element of this group acts as $\lambda^k\rho(A)$ on a selected
+eigenspace. Lemma~\ref{projectedkernel} identifies its kernel exactly
+as~\eqref{closedextension}.
+
+For $g=1$, $r^2=\delta^{2a}$, so on $\mathscr W_\chi$ its eigenvalues
+belong to $\{\chi^a,-\chi^a\}$. Both signs occur unless the space
+is one-dimensional: the same trace bound is at most one, whereas
+every eigenspace has dimension at least two for $p\ge7$.
+For $p=5$ the dimensions are $1,2,2$; on the unique one-dimensional
+space the finite Weil operator $r$ acts by one. This follows either
+from its character or the inert-torus multiplicity formula in
+\cite{GH}, Theorem 1.3: among the six torus characters exactly the
+quadratic one is omitted. This proves all small-range assertions.
+
+\section{Charged affine groups and their scalars}
+In the splitting $H_1=R\oplus V$, a braid acts as
+$(r,v)\mapsto(r+\ell(v),Av)$. Lemma~\ref{wilson} specializes this to
+\[
+W_v\longmapsto\chi_b(\ell(v))W_{Av}.
+\]
+Its projective implementer is unique. It is scalar if and only if
+$A=I$ and $\chi_b\circ\ell=0$, since the Weyl basis is linearly
+independent. The finite image in Lemma~\ref{finiteimage} now gives
+the claimed projective groups. If $E$ is a field, any nonzero
+$E$-linear functional is onto $E$, so composition with the nontrivial
+boundary character is injective on the translation radical. In the
+split case its two components survive exactly when both components
+of the output label survive. This is the stated distinction between
+isotropic and nonisotropic outputs.
+
+For explicit linear kernels use the Heisenberg convention
+\[
+\pi(v)\pi(v')=\psi(\tfrac12\omega(v,v'))\pi(v+v').
+\]
+For each braid generator choose $x_i$ with
+$t_i=(I-A_i)x_i$ its specialized translation. Its canonical affine
+implementer is
+\[
+C_i=\pi(x_i)\rho(A_i)\pi(x_i)^{-1}
+=\psi(z_i)\pi(t_i)\rho(A_i),\quad
+z_i=-\tfrac12\omega(x_i,A_ix_i).
+\]
+The phase $z_i$ is independent of the fixed-vector ambiguity in $x_i$.
+Words are evaluated in the finite group law
+\[
+(t,A,z)(t',A',z')=
+(t+At',AA',z+z'+\tfrac12\omega(t,At')).
+\]
+The actual operator is $\lambda^{w(\beta)}\psi(z(\beta))
+\pi(t(\beta))\rho(A(\beta))$. Consequently its linear kernel is
+$A=I$, $t=0$ and $\lambda^w\psi(z)=1$. The two scalar orders are
+coprime, so the last condition is equivalently $\lambda^w=1$, $z=0$.
+This gives a finite-field word criterion in addition to the projective
+kernel in Theorem~\ref{main}.
+As a scalar consistency check, a full braid twist in this charged
+sector has $A=I$, $t=0$. Balancing forces its remaining Heisenberg
+phase to be the output twist $q_W(b)$, since $9\mid n^2$.
+It is trivial on isotropic outputs and generates $\mu_p$ on every
+nonisotropic output.
+
+For full translations, commutators of translation lifts yield the
+entire central $\mu_p$. Their non-$p$ scalar parts have order at most
+three since their compact determinant is one. Taking cube powers
+therefore isolates the full Heisenberg $p$ subgroup. Removing its
+translation and phase from each crossing leaves $\lambda\rho(A_i)$.
+This complement is exactly $H_\theta$: its compact part is faithful
+projectively on the full Heisenberg module and its scalar kernel
+over $I$ is $N_\theta$. Its intersection with the Heisenberg group
+is trivial by the coprime scalar orders. This proves~\eqref{chargedextension}.
+
+In the split isotropic case choose a Schr\"odinger polarization for
+which the surviving translations are shifts. The compact group
+preserves this Lagrangian, and its Weil operator is a permutation
+times the quadratic determinant character. Each affine reflection
+has a fixed point in this same Lagrangian, so conjugating by a shift
+introduces no scalar phase. Trace normalization makes every actual
+crossing a permutation times $\theta$. Thus no $\mu_p$ scalar is
+generated. The same cube-power isolation of translations and the
+same determinant fiber product give $\Fp^g\rtimes H_\theta$.
+
+\section{Cocycle comparison}\label{zesting}
+For completeness the intrinsic twist formulas can be related to an
+arbitrary chosen base gauging. Use the right-action convention of
+\cite{DGP RZ}, Definition 2.7. Put $\zeta=e^{2\pi i/3}$ and
+$\eta_b=e^{2\pi i b/9}$, $b\in\{0,1,2\}$, and change the crossed
+associator by
+$\nu_b(i,j,k)=\zeta^{bk\lfloor(i+j)/3\rfloor}$.
+The unit-valued crossed zesting multiplies $\mu_k$ by $\nu_b(i,j,k)$,
+$\gamma_{i,j}$ on grade $k$ by its inverse, and leaves crossed
+braiding unchanged; see equations (3.19), (3.22)--(3.24) there.
+If $X=(T,u)$ has grade $a$, set $u'_h=\eta_b^{ah}u_h$.
+The equivariance equation is satisfied precisely because of the
+carry in the new compositor. Tensor products acquire the electric
+carry $e^{2b\lfloor(i+j)/3\rfloor}$. Thus
+\[
+\Hom_{\mathcal G_b}(F_b(Y),F_b(X)^n)
+\cong\Hom_{\mathcal G_0}
+(Y e^{-2b\lfloor na/3\rfloor},X^n).
+\]
+The braid character changes by $\eta_b^{a^2w}$, and the twist changes
+by $\eta_b^{a^2}$. Scalar associator factors cancel on identical
+strand grades. These changes agree with the projectors and all
+scalar extensions above. Since $H^2(C_3,\Fp^3)=0$ and
+$H^3(C_3,\mathbb C^\times)\cong C_3$, these are all allowed choices.
+
+\section*{Acknowledgments}
+I thank Cygnus for a complete independent assessment of the mathematical
+arguments and their relation to previous work.
+The results have not been checked by a human mathematician.
+
+\begin{thebibliography}{99}
+\bibitem{AP} J. Achter and R. Pries, The integral monodromy of hyperelliptic
+and trielliptic curves, Math. Ann. 338 (2007), 187--206, arXiv:math/0608038.
+\bibitem{BJQ} M. Barkeshli, C.-M. Jian and X.-L. Qi, Genons, twist defects,
+and projective non-Abelian braiding statistics, arXiv:1208.4834v2.
+\bibitem{BS} T. Barmeier and C. Schweigert, A geometric construction for
+permutation equivariant categories from modular functors, arXiv:1004.1825.
+\bibitem{Atlas} J. Berean-Dutcher, C. C\'ordova, J. Parra-Martinez and
+R. Tuddenham, The Anyon Atlas, arXiv:2610.25439.
+\bibitem{DM} T. Deshpande and S. Mukhopadhyay, Crossed modular categories
+and the Verlinde formula for twisted conformal blocks, arXiv:1909.10799v4.
+\bibitem{DGP RZ} C. Delaney, C. Galindo, J. Plavnik, E. Rowell and Q. Zhang,
+$G$-crossed braided zesting, J. London Math. Soc. 109 (2024), e12816,
+arXiv:2212.05336.
+\bibitem{GPR} C. Galindo, J. Plavnik and E. Rowell, Integral
+non-group-theoretical modular categories of dimension $p^2q^2$,
+Bull. Belg. Math. Soc. Simon Stevin 31 (2024), 516--526, arXiv:2404.03826.
+\bibitem{GH} S. Gurevich and R. Hadani, Bounds on certain higher-dimensional
+exponential sums via the self-reducibility of the Weil representation,
+arXiv:math/0612765v2.
+\bibitem{GKRZ} P. Gustafson, A. Kimball, E. Rowell and Q. Zhang,
+Braid group representations from twisted tensor products of algebras,
+Peking Math. J. 3 (2020), 103--130, arXiv:1906.08153.
+\bibitem{GR26} C. Galindo and E. Rowell, Unitary Yang--Baxter operators:
+towards a classification, arXiv:2608.16865v1.
+\bibitem{Stirling} S. Stirling, Abelian Chern--Simons theory with toral
+gauge group, modular tensor categories, and group categories,
+arXiv:0807.2857.
+\bibitem{Ven} T. N. Venkataramana, Monodromy of cyclic coverings of the
+projective line, Invent. Math. 197 (2014), 1--45, arXiv:1204.4778.
+\bibitem{ZS} A. E. Zalesskii and V. N. Serezhkin, Linear groups generated
+by transvections, Math. USSR-Izv. 10 (1976), 25--46.
+\end{thebibliography}
+\end{document}

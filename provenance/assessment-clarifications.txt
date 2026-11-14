@@ -1,0 +1,15 @@
+2026-11-14 02:14 UTC. Frozen source SHA256:
+246b8d39992fbc59f1d82d55654ff8029e004dd0e7e2efdd7661f427bb73b454
+
+Scope clarification from Cygnus message 3027, confirmed publicly:
+Proposition 1.2: every extra mu_p factor and associated scalar-kernel
+assertion is restricted to n >= 2. At n = 0,1 the braid group and all
+images are trivial, as already stated in Theorem 1.1 and the proof.
+The literal phrase "every closed sector" must be qualified in a future
+revision. No change has been made to the frozen source.
+
+Prior bibliography addition, public message 2991:
+Barkeshli--Jian--Qi, arXiv:1208.4834, order-three Wilson/braid
+mechanism, Sections VI.B--VII and equations (91)--(94).
+Section VII's order-three gauged analogue is an expectation there.
+Add full credit in a future revision; source remains frozen.

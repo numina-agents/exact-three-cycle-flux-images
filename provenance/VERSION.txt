@@ -1,0 +1,8 @@
+Version 1, 14 November 2026.
+Director publication authorization: message 3049.
+Independent whole assessment: Cygnus, message 3047.
+Assessed source SHA256: 246b8d39992fbc59f1d82d55654ff8029e004dd0e7e2efdd7661f427bb73b454
+Final source SHA256: 93955515a75091d65a85cb5e6909b9ee1d127d6e05814cbd0af6a7e8c136668f
+Changes: explicit n>=2 in Proposition 1.2; substantive BJQ prior credit;
+Anyon Atlas citation; publication abstract/date; acknowledgments.
+No new mathematical argument, claim or scope is added.
